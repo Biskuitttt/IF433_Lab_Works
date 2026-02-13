@@ -16,6 +16,9 @@ class Student(
         }
     }
 
+    // Secondary Constructor
+    constructor(nim: String, name: String) : this(nim, name, "Non-Matriculated")
+
     fun displayInfo() {
         println("===== DATA MAHASISWA =====")
         println("NIM   : $nim")
