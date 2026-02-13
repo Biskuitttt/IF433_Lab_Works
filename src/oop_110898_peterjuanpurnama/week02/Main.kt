@@ -27,6 +27,7 @@ fun main() {
 
         println("Masukkan IPK:")
         val gpa = scanner.nextDouble()
+        scanner.nextLine()
 
         student = Student(nim, name, major, gpa)
     } else {
@@ -35,5 +36,39 @@ fun main() {
 
     println()
     student.displayInfo()
+
+    println("\n=== SISTEM PERPUSTAKAAN ===")
+
+    println("Masukkan Judul Buku:")
+    val bookTitle = scanner.nextLine()
+
+    println("Masukkan Nama Peminjam:")
+    val borrower = scanner.nextLine()
+
+    println("Lama Peminjaman (hari):")
+    var duration: Int
+
+    while (true) {
+        try {
+            duration = scanner.nextLine().toInt()
+            break
+        } catch (e: Exception) {
+            println("Masukkan angka yang benar!")
+        }
+    }
+
+
+// Validasi tidak boleh minus
+    if (duration < 1) {
+        duration = 1
+    }
+
+    val loan = Loan(bookTitle, borrower, duration)
+
+    println("\n===== DATA PEMINJAMAN =====")
+    println("Judul Buku : ${loan.bookTitle}")
+    println("Peminjam   : ${loan.borrower}")
+    println("Durasi     : ${loan.loanDuration} hari")
+    println("Total Denda: Rp ${loan.calculateFine()}")
 
 }
