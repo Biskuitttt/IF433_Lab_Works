@@ -11,7 +11,7 @@ fun calculateGrade(score: Int?) =
 
 fun main() {
     val studentName = "Budi"
-    val score: Int? = null   // coba ganti 80 kalau mau tes
+    val score: Int? = null 
 
     val grade = calculateGrade(score ?: 0)
 
