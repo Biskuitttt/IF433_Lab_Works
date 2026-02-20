@@ -5,7 +5,7 @@ class Employee(
     salary: Int
 ) {
 
-        var salary: Int = salary
+    var salary: Int = salary
         set(value) {
             if (value < 0) {
                 println("Salary tidak boleh negatif!")
@@ -13,5 +13,16 @@ class Employee(
                 field = value
             }
         }
+
+    private var performanceRating: Int = 0
+
+    fun updateRating(newRating: Int) {
+        if (newRating in 1..5) {
+            performanceRating = newRating
+            println("Rating berhasil diupdate")
+        } else {
+            println("Rating harus 1 sampai 5")
+        }
+    }
 
 }
