@@ -19,10 +19,10 @@ class Employee(
     fun updateRating(newRating: Int) {
         if (newRating in 1..5) {
             performanceRating = newRating
-            println("Rating berhasil diupdate")
-        } else {
-            println("Rating harus 1 sampai 5")
         }
     }
+
+    val bonus: Int
+        get() = salary * performanceRating * 100
 
 }
