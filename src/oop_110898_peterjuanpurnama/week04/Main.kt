@@ -19,4 +19,15 @@ fun main() {
     tesla.accelerate()
     tesla.honk()
     tesla.openTrunk()
+
+    println()
+    println("===== DATA KARYAWAN =====")
+
+    val manager = Manager("Budi", 10000000.0, 5000000.0)
+    manager.displayInfo()
+
+    println()
+
+    val developer = Developer("Andi", 8000000.0, 2000000.0)
+    developer.displayInfo()
 }
