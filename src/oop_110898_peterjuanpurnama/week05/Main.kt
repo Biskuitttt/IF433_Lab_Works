@@ -15,5 +15,9 @@ fun main() {
             is Admin -> p.mengelolaData()
         }
     }
+    val math = MathHelper()
 
+    println("Luas Persegi: ${math.hitungLuas(4)}")
+    println("Luas Persegi Panjang: ${math.hitungLuas(4,6)}")
+    println("Luas Lingkaran: ${math.hitungLuas(7.0)}")
 }
