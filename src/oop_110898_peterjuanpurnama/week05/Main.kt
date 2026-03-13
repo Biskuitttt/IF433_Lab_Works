@@ -29,4 +29,14 @@ fun main() {
     for (method in payments) {
         method.processPayment(75000.0)
     }
+    for (method in payments) {
+
+        method.processPayment(75000.0)
+
+        if (method is EWallet) {
+            method.topUp(50000.0)
+            method.processPayment(75000.0)
+        }
+
+    }
 }
