@@ -1,4 +1,4 @@
-package oop_nim_nama.week05
+package oop_110898_peterjuanpurnama.week05
 
 class Dosen(nama: String) : Pegawai(nama) {
 
