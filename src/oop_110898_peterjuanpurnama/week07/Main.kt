@@ -31,3 +31,6 @@ fun testResponse(res: ApiResponse) {
         ApiResponse.Loading -> "Loading..."
     }
     println(msg)
+
+    GameManager.startGame()
+    GameManager.startGame()

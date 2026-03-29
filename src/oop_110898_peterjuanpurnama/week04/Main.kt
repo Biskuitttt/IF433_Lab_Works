@@ -31,6 +31,3 @@ fun main() {
     val developer = Developer("Andi", 8000000.0, 2000000.0)
     developer.displayInfo()
 }
-
-GameManager.startGame()
-GameManager.startGame()
