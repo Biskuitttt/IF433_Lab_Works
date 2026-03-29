@@ -26,5 +26,5 @@ fun testResponse(res: ApiResponse) {
     val msg = when (res) {
         is ApiResponse.Success -> "OK"
         is ApiResponse.Error -> "Error"
+        ApiResponse.Loading -> "Loading..."
     }
-}
