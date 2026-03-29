@@ -43,3 +43,5 @@ fun testResponse(res: ApiResponse) {
     processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
     processEvent(BattleState.LootDropped(upgraded))
     processEvent(BattleState.GameOver("Terkena racun"))
+
+    heheheh
