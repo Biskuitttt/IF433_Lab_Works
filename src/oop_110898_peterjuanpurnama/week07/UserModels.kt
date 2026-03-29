@@ -1,0 +1,3 @@
+package oop_110898_peterjuanpurnama.week07
+
+class User(val name: String, val age: Int)
