@@ -28,3 +28,18 @@ fun testResponse(res: ApiResponse) {
         is ApiResponse.Error -> "Error"
         ApiResponse.Loading -> "Loading..."
     }
+
+    GameManager.startGame()
+    GameManager.startGame()
+
+    println(ItemRarity.LEGENDARY.dropChance)
+
+    val weapon = Weapon.forgeStarterSword()
+    println(weapon.item)
+
+    val upgraded = weapon.item.copy(damage = 25)
+
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgraded))
+    processEvent(BattleState.GameOver("Terkena racun"))
