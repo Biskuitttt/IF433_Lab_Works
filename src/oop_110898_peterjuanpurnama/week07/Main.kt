@@ -21,3 +21,10 @@ val d3 = d1.copy(age = 25)
 val (name, age) = d3
 println(name)
 println(age)
+
+fun testResponse(res: ApiResponse) {
+    val msg = when (res) {
+        is ApiResponse.Success -> "OK"
+        is ApiResponse.Error -> "Error"
+    }
+}
