@@ -34,3 +34,8 @@ fun testResponse(res: ApiResponse) {
 
     GameManager.startGame()
     GameManager.startGame()
+
+    println(ItemRarity.LEGENDARY.dropChance)
+
+    val weapon = Weapon.forgeStarterSword()
+    println(weapon.item)
