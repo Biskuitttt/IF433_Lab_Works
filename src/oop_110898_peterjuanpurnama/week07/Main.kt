@@ -16,3 +16,8 @@ val d1 = UserData("A", 20)
 val d2 = UserData("A", 20)
 println(d1)
 println(d1 == d2)
+
+val d3 = d1.copy(age = 25)
+val (name, age) = d3
+println(name)
+println(age)
