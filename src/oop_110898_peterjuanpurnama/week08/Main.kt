@@ -4,4 +4,7 @@ fun main() {
     val order = Order(Customer(Address("Jakarta")))
     val city = order.customer?.address?.city ?: "Unknown City"
     println(city)
+    order.customer?.address?.city?.let {
+        println("City found: $it")
+    }
 }
