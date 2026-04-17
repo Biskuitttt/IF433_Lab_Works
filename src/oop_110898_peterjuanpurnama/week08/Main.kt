@@ -17,4 +17,5 @@ fun main() {
     println(safeName.length)
     val data = LegacyJavaAPI.getData()!!
     println(data)
+    runMockUnitTest()
 }
