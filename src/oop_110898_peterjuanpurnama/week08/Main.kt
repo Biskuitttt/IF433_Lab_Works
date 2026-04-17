@@ -7,4 +7,5 @@ fun main() {
     order.customer?.address?.city?.let {
         println("City found: $it")
     }
+    val mixedData: List<Any> = listOf("Hello", 123, true, "World")
 }
