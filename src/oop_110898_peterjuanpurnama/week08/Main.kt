@@ -13,5 +13,6 @@ fun main() {
         println(text)
     }
     val name: String? = null
-    println(name!!.length)
+    val safeName = requireNotNull(name) { "Name cannot be null" }
+    println(safeName.length)
 }
