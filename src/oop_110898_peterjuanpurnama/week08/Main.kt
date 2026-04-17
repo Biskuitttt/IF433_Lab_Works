@@ -12,4 +12,6 @@ fun main() {
         val text = item as? String ?: "Not a String"
         println(text)
     }
+    val name: String? = null
+    println(name!!.length)
 }
