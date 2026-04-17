@@ -8,4 +8,8 @@ fun main() {
         println("City found: $it")
     }
     val mixedData: List<Any> = listOf("Hello", 123, true, "World")
+    for (item in mixedData) {
+        val text = item as? String ?: "Not a String"
+        println(text)
+    }
 }
