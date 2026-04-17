@@ -15,4 +15,6 @@ fun main() {
     val name: String? = null
     val safeName = requireNotNull(name) { "Name cannot be null" }
     println(safeName.length)
+    val data = LegacyJavaAPI.getData()!!
+    println(data)
 }
