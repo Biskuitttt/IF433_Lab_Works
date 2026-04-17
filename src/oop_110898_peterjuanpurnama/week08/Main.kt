@@ -1,0 +1,7 @@
+package oop_110898_peterjuanpurnama.week08
+
+fun main() {
+    val order = Order(Customer(Address("Jakarta")))
+    val city = order.customer?.address?.city ?: "Unknown City"
+    println(city)
+}
