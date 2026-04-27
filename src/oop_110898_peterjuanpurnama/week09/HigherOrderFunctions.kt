@@ -8,4 +8,7 @@ fun main() {
 
     val mapped = numbers.map { it * 2 }
     println(mapped)
+
+    val sorted = numbers.sortedByDescending { it }
+    sorted.forEach { println(it) }
 }
