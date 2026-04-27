@@ -7,4 +7,6 @@ fun main() {
     val mutableList = mutableListOf("A", "B", "C")
     mutableList.add("D")
     println(mutableList)
+    val setData = setOf(1, 2, 2, 3, 3, 4)
+    println(setData)
 }
