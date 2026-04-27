@@ -15,4 +15,4 @@ fun main() {
         .map { it.name }
 
     println(result)
-}}
+}
