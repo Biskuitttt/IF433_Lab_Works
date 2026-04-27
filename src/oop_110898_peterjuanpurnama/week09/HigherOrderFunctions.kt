@@ -5,4 +5,7 @@ fun main() {
 
     val filtered = numbers.filter { it > 2 }
     println(filtered)
+
+    val mapped = numbers.map { it * 2 }
+    println(mapped)
 }
