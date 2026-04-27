@@ -9,4 +9,10 @@ fun main() {
     println(mutableList)
     val setData = setOf(1, 2, 2, 3, 3, 4)
     println(setData)
+
+    val mapData = mapOf(
+        "A" to 1,
+        "B" to 2
+    )
+    println(mapData)
 }
