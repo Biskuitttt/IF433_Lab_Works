@@ -7,3 +7,6 @@ fun String.addExclamation(): String {
 fun String.reverseWords(): String {
     return this.split(" ").reversed().joinToString(" ")
 }
+fun String?.isNullOrShort(): Boolean {
+    return this == null || this.length < 5
+}
