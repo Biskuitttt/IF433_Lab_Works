@@ -12,3 +12,11 @@ fun main() {
     println(shortText.isNullOrShort())
     println(nullText.isNullOrShort())
 }
+val lamp = SmartDevice("", "").apply {
+    name = "Philips WiZ Living Room"
+    category = "Lighting"
+    isOnline = true
+    powerLoad = 12
+}.also {
+    homeDevices.add(it)
+}
