@@ -25,3 +25,10 @@ with(loggedUser) {
     println(name)
     println(age)
 }
+
+val finalUser = User().apply {
+    name = "Final User"
+    age = 25
+}.also {
+    println("Configured: ${it.name}")
+}
