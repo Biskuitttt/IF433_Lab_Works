@@ -20,3 +20,8 @@ val loggedUser = User().apply {
 }.also {
     println("User created: ${it.name}")
 }
+
+with(loggedUser) {
+    println(name)
+    println(age)
+}
