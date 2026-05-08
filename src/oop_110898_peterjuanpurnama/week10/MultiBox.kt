@@ -1,12 +1,13 @@
 package oop_110898_peterjuanpurnama.week10
 
-class PairBox<K, V>(
-    private val key: K,
-    private val value: V
-) {
+fun main() {
 
-    fun printPair() {
-        println("Key: $key")
-        println("Value: $value")
-    }
+    val intBox = Box(100)
+    val stringBox = Box("Hello Kotlin")
+
+    println(intBox.getItem())
+    println(stringBox.getItem())
+
+    val pair = PairBox("ID001", "Laptop")
+    pair.printPair()
 }
