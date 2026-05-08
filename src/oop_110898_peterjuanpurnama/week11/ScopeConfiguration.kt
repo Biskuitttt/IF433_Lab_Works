@@ -14,3 +14,9 @@ fun main() {
     println(user.name)
     println(user.age)
 }
+val loggedUser = User().apply {
+    name = "Juan"
+    age = 20
+}.also {
+    println("User created: ${it.name}")
+}
