@@ -8,3 +8,9 @@ class NumericalStorage<T : Number>(
         return number.toDouble() * number.toDouble()
     }
 }
+
+fun <T> compareValues(a: T, b: T): T
+        where T : Comparable<T> {
+
+    return if (a > b) a else b
+}
