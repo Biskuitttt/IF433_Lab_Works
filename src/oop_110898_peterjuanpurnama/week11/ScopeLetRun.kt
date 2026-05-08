@@ -6,4 +6,10 @@ fun main() {
     username?.let {
         println("Username length: ${it.length}")
     }
+
+    val result = "Kotlin".run {
+        length * 2
+    }
+
+    println("Run result: $result")
 }
