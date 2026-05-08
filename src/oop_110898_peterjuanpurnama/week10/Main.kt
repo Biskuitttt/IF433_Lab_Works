@@ -16,4 +16,10 @@ fun main() {
 
     val result = returnData("Returned String")
     println(result)
+
+    val num = NumericalStorage(8)
+    println(num.square())
+
+    println(compareValues(10, 20))
+    println(compareValues("Apple", "Banana"))
 }
