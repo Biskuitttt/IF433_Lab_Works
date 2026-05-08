@@ -63,3 +63,6 @@ val totalPower = homeDevices.run {
 }
 
 println("Total daya: $totalPower Watt")
+homeDevices.forEach {
+    println(it.diagnose())
+}
