@@ -10,3 +10,21 @@ fun main() {
 
     println(result)
 }
+fun handleResult() {
+
+    val result = runCatching {
+        "abc".toInt()
+    }
+
+    val value = result.getOrElse {
+        0
+    }
+
+    println("Nilai default: $value")
+
+    val recoverResult = result.recover {
+        -1
+    }
+
+    println(recoverResult.getOrNull())
+}
