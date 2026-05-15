@@ -28,3 +28,18 @@ fun handleResult() {
 
     println(recoverResult.getOrNull())
 }
+fun chainingExample() {
+
+    runCatching {
+
+        "500".toInt()
+
+    }.onSuccess {
+
+        println("Sukses: $it")
+
+    }.onFailure {
+
+        println("Gagal: ${it.message}")
+    }
+}
