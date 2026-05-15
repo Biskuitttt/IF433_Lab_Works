@@ -16,3 +16,27 @@ class BankAccount(var balance: Int) {
         println("Sisa saldo: Rp$balance")
     }
 }
+
+fun main() {
+
+    val account = BankAccount(50000)
+
+    try {
+
+        account.withdraw(100000)
+
+        val number = "abc".toInt()
+
+    } catch (e: InsufficientFundsException) {
+
+        println("Custom Error: ${e.message}")
+
+    } catch (e: NumberFormatException) {
+
+        println("Format angka salah")
+
+    } catch (e: Exception) {
+
+        println("General Error: ${e.message}")
+    }
+}
