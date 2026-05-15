@@ -9,4 +9,17 @@ fun basicDivision(a: Int, b: Int) {
     } finally {
         println("Program selesai dijalankan")
     }
+
+    fun main() {
+
+        basicDivision(10, 0)
+
+        val result = try {
+            10 / 2
+        } catch (e: ArithmeticException) {
+            0
+        }
+
+        println("Result expression: $result")
+    }
 }
