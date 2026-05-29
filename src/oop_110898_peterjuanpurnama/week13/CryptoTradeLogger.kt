@@ -42,6 +42,7 @@ fun loadTrades(path: String): List<TradeRecord> {
         emptyList()
     }
 }
+
 fun main() {
     val trades = listOf(
         TradeRecord(id = 1, symbol = "BTCUSDT", type = "Long", margin = 100.0, pnl = 25.5),
@@ -56,4 +57,8 @@ fun main() {
 
     val loadedData = loadTrades(path = "crypto_trades.csv")
     val totalPnl = loadedData.sumOf { it.pnl }
+
+    println("\n=== VALID TRADE ENTRIES ===")
+    loadedData.forEach { println(it) }
+    println("==== TOTAL PnL BERSIH: $totalPnl ====")
 }
