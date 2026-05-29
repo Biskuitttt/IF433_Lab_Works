@@ -16,8 +16,6 @@ class BadOrderProcessor {
     }
 }
 
-// --- SRP & DIP FIX ---
-
 interface OrderRepository {
     fun saveOrder(itemName: String, finalPrice: Double, customerType: String)
 }
@@ -41,13 +39,36 @@ class EmailNotifier : NotificationService {
     }
 }
 
+interface PricingStrategy {
+    fun calculate(price: Double): Double
+}
+
+class RegularPricing : PricingStrategy {
+    override fun calculate(price: Double) = price
+}
+
+class VipPricing : PricingStrategy {
+    override fun calculate(price: Double) = price * 0.90
+}
+
 class SafeOrderProcessor(
     private val repo: OrderRepository,
     private val notifier: NotificationService
 ) {
-    fun processOrder(itemName: String, finalPrice: Double, customerType: String) {
+    fun processOrder(itemName: String, basePrice: Double, pricing: PricingStrategy) {
+        val finalPrice = pricing.calculate(basePrice)
         println("Memproses pesanan $itemName seharga $finalPrice")
-        repo.saveOrder(itemName, finalPrice, customerType)
+        repo.saveOrder(itemName, finalPrice, pricing::class.simpleName ?: "Unknown")
         notifier.sendNotification(itemName)
     }
+}
+
+fun main() {
+    val processor = SafeOrderProcessor(
+        repo = CsvOrderRepository(),
+        notifier = EmailNotifier()
+    )
+
+    processor.processOrder("Laptop", 15000000.0, RegularPricing())
+    processor.processOrder("iPhone", 20000000.0, VipPricing())
 }
